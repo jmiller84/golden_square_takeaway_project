@@ -1,4 +1,4 @@
-from lib.menu_item import *
+from menu_item import *
 
 class Menu():
 

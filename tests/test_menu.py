@@ -26,11 +26,5 @@ def test_menu_has_three_desserts():
     assert len(menu.desserts) == 3
 
 
-# """
-# Test display menu returns a print out of the menu
-# """
-# def test_display_menu():
-#     menu = Menu()
-#     assert menu.display_menu() == 5
 
 

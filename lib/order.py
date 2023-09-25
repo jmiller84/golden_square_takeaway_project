@@ -10,7 +10,6 @@ class Order():
     def add(self, menu_item):
         self.order_list.append(menu_item)
 
-
     def remove(self, menu_item):
         self.order_list.remove(menu_item)
 
