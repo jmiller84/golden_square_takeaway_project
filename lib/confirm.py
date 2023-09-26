@@ -1,29 +1,14 @@
-
-from config import *
-from twilio.rest import Client
-from order import *
-from menu import *
-
+from lib.send_text import *
 
 class Confirm():
 
-    def __init__(self, order):
+    def __init__(self, order, message_sender):
         self.order = order
+        self.message_sender = message_sender
 
     def confirm_order(self):
-        # sets self.order.confirmed to True 
-        # sends text message to user
         self.order.confirmed = True
+        return self.message_sender.send_text_message()
 
-        account_sid = 'AC7f4404071dc0638248dbce740e6328c8'
-        token = auth_token
-        client = Client(account_sid, token)
+    
 
-        message = client.messages.create(
-        from_='+447723918953',
-        body='Thank you! Your order was placed and will be delivered before 18:52',
-        to='+447877155379'
-        )
-
-        print(message.sid)
-        
